@@ -1,0 +1,190 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+     position: fixed;
+    top: 0px;
+    width: 100%;
+    background-color: white;
+}
+#notify-bell{
+    margin-top: 20px;
+    margin-right: 40px;
+}
+
+.Logo-Sec{
+    display: flex;
+    flex-direction: row;
+    /* height: 300px;
+    line-height: 20px; */
+    margin-left: 30px;
+}
+#reciept-icon{
+    font-size: 30px;
+    margin-top: 16px;
+}
+.Hero{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10rem;
+    margin-top: 5rem;
+    /* background-color: blue; */
+    width: 600px;
+}
+.hero-sec{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+   
+    margin-right: 10rem;
+    /* background-color: blue; */
+    /* width: 500px; */
+}
+#login-btn{
+    padding: 10px;
+    border-radius: 6px;
+    margin-right: 9rem;
+    border: none;
+    width: 150px;
+    font-size: 14px;
+    background-color: black;
+    color: white;
+}
+.drop{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 300px;
+    margin-left: 20px;
+}
+.dragDropBlock{
+    display: flex;
+    /* gap: 10px; */
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+    /* background-color: yellow; */
+    width: 400px;
+    margin-left: 30px;
+    margin-top: 40px;
+    padding: 10px;
+    border: 2px solid black;
+}
+#cloud{
+    font-size: 2.3rem;
+}
+.content{
+    display:flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    width: 370px;
+    /* background-color: blueviolet; */
+    padding: 10px;
+}
+#category{
+  width: 370px;
+  height: 30px;
+   border-radius: 5px;
+border: 1px solid black;
+color: black;
+}
+#desp{
+    width: 370px;
+    height: 30px;
+     border-radius: 5px;
+border: 1px solid black;
+color: black;
+}
+#btnUpload{
+    width: 370px;
+    height: 30px;
+    border-radius: 5px;
+border: 1px solid black;
+color: white;
+background-color: black;
+}
+.categories{
+    display: flex;
+    margin-top: 50px;
+    gap: 10px;
+   width: 70rem;
+   /* background-color: aquamarine; */
+}
+.Reciepst-box ,.Warranties-box, .Bills-box ,.Others-box{
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    border: 2px solid black;
+    /* gap: 1px; */
+    border-radius:9px;
+    
+    padding: 10px;
+}
+.head-bar{
+    display: flex;
+    flex-direction: row;
+}
+/* .head-bar li{
+   
+    
+} */
+#icon-1 ,#icon-2,#icon-3,#icon-4{
+     font-size: 20px;
+     margin-top: 20px;
+}
+.dropBorder{
+    border: spx solid black;
+}
+.ready{
+  
+   box-shadow: rgba(0, 123, 255, 0.4) 0px 5px 15px;
+}
+.reciept-card{
+    
+   
+   /* height:500px; */
+  
+} 
+.reciept-card img ,.reciept-card embed {
+    width: 500px;
+    height: 300px;
+    /* margin-right: 14rem; */
+    
+}
+#uploadFiles{
+    display: flex;
+    
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+  
+    margin-top: 5rem;
+  
+    background-color: blue;
+   
+}
+/* nav{
+   
+   display: flex; 
+   justify-content: center;
+   align-items: center;  
+} */
+
+.reciept{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+   
+}
+.Reciept-Box h3{
+    margin-top: 40px;
+}
+.Reciept-Box{
+     text-align: center;
+    margin-top: 7rem;
+    margin-left: 10rem;
+}

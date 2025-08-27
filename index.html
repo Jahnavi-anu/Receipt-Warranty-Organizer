@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav>
+        <div class="Logo-Sec">
+        <i class="fa-solid fa-receipt" id="reciept-icon"></i>
+            <h2>Reciept Warranty Oraganier</h2>
+        </div>
+        <i class="fa-solid fa-bell" id="notify-bell"></i>
+
+    </nav>
+     <div class="Hero">
+        <div class="hero-sec">
+        <h2>Reciept Warranty Oraganier</h2>
+        <button id="login-btn">Get Started</button>
+       
+        </div>
+        
+    <div class="dragDropBlock">
+        <div class="drop" id="drop-area">
+            <!-- <input type="file"> -->
+             <i class="fa-solid fa-cloud-arrow-up" id="cloud"></i>
+             <p>Drag or Drop File Here click to upload</p>
+             <input type="file" id="fileInput" hidden>
+        </div>
+        <p id="fileName"></p>
+     <div class="content">
+
+            <select name="list" id="category">
+                <option value=""></option>
+                <option value="Reciept">Reciepts</option> 
+                <option value="Warranties">Warranties</option>
+                <option value="Bills">Bills</option>
+                <option value="Others">Others</option>
+            </select>
+            
+             <input type="text" id="desp" placeholder="Description">
+             <button id="btnUpload">Upload</button>
+     </div>
+       
+    </div>
+   
+  <div class="categories">
+    <div class="Reciepst-box">
+        <div class="head-bar">
+              <i class="fa-solid fa-file-invoice" id="icon-1"></i>
+              <h3>Reciepts</h3>
+        </div>
+        <div class="content-bar">
+            <p>Organize your purchase reciepts</p>
+        </div>
+    </div>
+     <div class="Warranties-box">
+         <div class="head-bar">
+            <i class="fa-solid fa-calendar-check" id="icon-2"></i>
+            <h3>Warranties</h3>
+         </div>
+         <div class="content-bar">
+            <p>keep track of product Warranties</p>
+         </div>
+     </div>
+     <div class="Bills-box">
+        <div class="head-bar">
+            <i class="fa-solid fa-file-invoice-dollar" id="icon-3"></i>
+            <h3>Bills</h3>
+        </div>
+        <div class="content-bar">
+            <p>Store and Manage your bills</p>
+        </div>
+     </div>
+      <div class="Others-box">
+        <div class="head-bar">
+            <i class="fa-solid fa-file" id="icon-4"></i>
+            <h3>Others</h3>
+        </div>
+        <div class="content-bar">
+            <p>Categorize Other important documents</p>
+        </div>
+      </div>
+   </div>
+     </div>
+     <div class="Reciept-Box">
+             <h3>Upload Files</h3>
+     <div class="upload-files" id="uploadFiles">
+     </div>
+     
+       
+        <!-- <ul id="filesList"></ul> -->
+    </div>
+  
+    <script src="script.js"></script>
+</body>
+</html>
