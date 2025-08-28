@@ -66,7 +66,7 @@ nav{
     border-radius: 10px;
     /* background-color: yellow; */
     width: 400px;
-    margin-left: 30px;
+    margin-left: 7px;
     margin-top: 40px;
     padding: 10px;
     border: 2px solid black;
@@ -142,15 +142,12 @@ background-color: black;
   
    box-shadow: rgba(0, 123, 255, 0.4) 0px 5px 15px;
 }
-.reciept-card{
-    
-   
-   /* height:500px; */
-  
-} 
+
 .reciept-card img ,.reciept-card embed {
-    width: 500px;
-    height: 300px;
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
     /* margin-right: 14rem; */
     
 }
@@ -186,5 +183,45 @@ background-color: black;
 .Reciept-Box{
      text-align: center;
     margin-top: 7rem;
-    margin-left: 10rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+.Notification-bar{
+    width: 300px;
+    height: 600px;
+    background-color: black;
+    position:fixed;
+     right: -300px;
+    top: 0;
+    color: white;
+   border-radius: 10px;
+   transition: right 0.3s ease-in-out;
+    /* z-index: 1000; */
+}
+.Notification-bar.active{
+   right: 0;
+}
+#notify-bell{
+     cursor: pointer;
+}
+#notify-bell:hover{
+    width: 20px;
+    height: 20px;
+     background-color: black;
+     color: white;
+     padding: 5px;
+     border-radius: 50%;
+}
+#power-btn{
+    position: relative;
+    left: -40px;
+    right: -100rem;
+    z-index: 1000;
+    
+}
+#closeBtn{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
 }

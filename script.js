@@ -93,3 +93,18 @@ reader.readAsDataURL(file);
  resetUploadFields();
 });
 
+const notfy = document.getElementById("notify-bell");
+const notifyslide = document.querySelector(".Notification-bar");
+const closeBtn = document.getElementById("closeBtn");
+
+notfy.addEventListener("click",()=>{
+     notifyslide.classList.toggle("active");
+});
+closeBtn.addEventListener("click",()=>{
+    notifyslide.classList.remove("active");
+});
+
+const loginBtn = document.getElementById("login-btn");
+loginBtn.addEventListener("click",()=>{
+    window.location.href = "Login.html";
+})

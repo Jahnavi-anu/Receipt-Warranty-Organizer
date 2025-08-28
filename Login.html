@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        #myForm{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 150px;
+            margin-left: 350px;
+            border: 1px solid black;
+            border-radius: 10px;
+            width: 560px;
+            height: 600px;
+           padding: 40px;
+
+            /* padding: 10px; */
+        }
+        .align{
+            display: flex;
+            flex-direction: column;
+        }
+        .inputabs{
+            width: 400px;
+            height: 50px;
+            border-radius: 6px;
+            border: 1px solid black;
+        }
+        h1{
+            width: 700px;
+            text-align: center;
+            margin-bottom: 70px;
+        }
+        #subbtn{
+            margin-top: 20px;
+            width: 400px;
+            padding: 10px;
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+        }
+        #reciept-icon{
+            width: 300px;
+            font-size: 70px;
+            
+        }
+        .invalid{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+     <form action="" id="myForm">
+        <i class="fa-solid fa-file-circle-check" id="reciept-icon" ></i>
+        <h1>Reciept Warranty <br> <span>Organizer</span> </h1>
+        <div class="align">
+                
+        <input type="text" id="firstName" class="inputabs" placeholder="UserName">
+        <span id="userError" class="error"></span><br>
+        </div>
+         <div class="align">
+           
+        <input type="text" id="email" class="inputabs" placeholder="Email">
+         <span id="emailError" class="error"></span><br>
+         </div>
+         
+          <div class="align">
+          
+        <input type="password" id="pwd" class="inputabs" placeholder="Password">
+         <span id="pwdError" class="error"></span><br>
+         </div>
+          <div class="align">
+            
+        <input type="text" id="Confrim" class="inputabs" placeholder="Confrim Password">
+         <span id="ConfrimError" class="error"></span><br>
+         </div>
+         <button type="submit" id="subbtn">Submit</button>
+    </form>
+    <script>
+        const myForm = document.getElementById("myForm");
+        const firstName = document.getElementById("firstName");
+        const email = document.getElementById("email");
+        // const phone = document.getElementById("phone");
+        const password = document.getElementById("pwd");
+        const Confrim = document.getElementById("Confrim");
+        //errors 
+        const userError = document.getElementById("userError");
+        const emailError = document.getElementById("emailError");
+        // const phoneError = document.getElementById("phoneError");
+        const pwdError = document.getElementById("pwdError");
+        const ConfrimError = document.getElementById("ConfrimError");
+
+        window.addEventListener('DOMContentLoaded',()=>{
+            [firstName,email,password ,Confrim].forEach(el => el.value ='');
+         })
+
+
+        function setError(input, error, msg){
+            error.textContent=msg;
+            input.classList.add("invalid");
+            
+        }
+        function clearError(input, error){
+            error.textContent="";
+            input.classList.remove("invalid");
+        }
+            myForm.addEventListener("submit",function(e){
+                e.preventDefault();
+
+                 let isvalid = true;
+                 [[firstName,userError],[email,emailError],[password,pwdError],[Confrim,ConfrimError]].forEach(([put,err]) => clearError(put,err));
+
+                 const userVal = firstName.value.trim();
+                 if(userVal.length<3){
+                    setError(firstName,userError,'User Must contain 3 characters');
+                    isvalid = false;
+                 }else if(userVal.length >15){
+            setError(firstName,userError,'username cannot exceed 15 characters');
+            isvalid = false;
+        }
+                  const emailPattern =/^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+                 if(!emailPattern.test(email.value.trim())){
+                    setError(email,emailError,'User Must cotain the following categories...');
+                    isvalid =false;
+                    
+                 }
+                 const pwdVal = password.value.trim();
+                if(pwdVal.length<8){
+                    setError(password,pwdError,'Password must be of 8 characters');
+                    isvalid = false;
+                }
+                const ConfrimVal = Confrim.value.trim();
+                if(ConfrimVal != pwdVal){
+                    setError(Confrim,ConfrimError,'Password must match');
+                    isvalid = false;
+                }
+                 if(isvalid){
+        alert("Form submitted successfully!");
+    }
+            });
+
+    </script>
+</body>
+</html>
