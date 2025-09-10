@@ -1,227 +1,715 @@
-nav{
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body{
     display: flex;
-    justify-content: space-between;
     flex-direction: row;
-     position: fixed;
-    top: 0px;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    /* overflow-x: hidden;
+    overflow-y: hidden; */
+    overflow-x: hidden;
+     box-sizing: border-box;
+}
+#sec1{
+    position: relative;
+    right: 0px;
+    display: flex;
+    flex-direction: row;
+   
+
+}
+#sec2{
     width: 100%;
-    background-color: white;
+    position:fixed;
+    display: flex;
+   flex-direction: column;
+   padding-left: 40px;
+   padding-right: 40px;
+   padding-top: 16px;
+   padding-bottom: 16px;
+z-index: 1000;
+ 
 }
-#notify-bell{
-    margin-top: 20px;
-    margin-right: 40px;
-}
+.Search-Box{
 
-.Logo-Sec{
-    display: flex;
-    flex-direction: row;
-    /* height: 300px;
-    line-height: 20px; */
-    margin-left: 30px;
+   position: relative;
 }
-#reciept-icon{
-    font-size: 30px;
-    margin-top: 16px;
-}
-.Hero{
-    display: flex;
-    flex-direction: column;
-    margin-left: 10rem;
-    margin-top: 5rem;
-    /* background-color: blue; */
-    width: 600px;
-}
-.hero-sec{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-   
-    margin-right: 10rem;
-    /* background-color: blue; */
-    /* width: 500px; */
-}
-#login-btn{
-    padding: 10px;
-    border-radius: 6px;
-    margin-right: 9rem;
-    border: none;
-    width: 150px;
-    font-size: 14px;
-    background-color: black;
-    color: white;
-}
-.drop{
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    width: 300px;
-    margin-left: 20px;
-}
-.dragDropBlock{
-    display: flex;
-    /* gap: 10px; */
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 10px;
-    /* background-color: yellow; */
-    width: 400px;
-    margin-left: 7px;
-    margin-top: 40px;
-    padding: 10px;
-    border: 2px solid black;
-}
-#cloud{
-    font-size: 2.3rem;
-}
-.content{
-    display:flex;
-    flex-direction: column;
-    gap: 5px;
-    justify-content: center;
-    align-items: center;
-    width: 370px;
-    /* background-color: blueviolet; */
-    padding: 10px;
-}
-#category{
-  width: 370px;
-  height: 30px;
-   border-radius: 5px;
-border: 1px solid black;
-color: black;
-}
-#desp{
-    width: 370px;
-    height: 30px;
-     border-radius: 5px;
-border: 1px solid black;
-color: black;
-}
-#btnUpload{
-    width: 370px;
-    height: 30px;
-    border-radius: 5px;
-border: 1px solid black;
-color: white;
-background-color: black;
-}
-.categories{
-    display: flex;
-    margin-top: 50px;
-    gap: 10px;
-   width: 70rem;
-   /* background-color: aquamarine; */
-}
-.Reciepst-box ,.Warranties-box, .Bills-box ,.Others-box{
-    display: flex;
-    flex-direction: column;
-    width: 900px;
-    border: 2px solid black;
-    /* gap: 1px; */
-    border-radius:9px;
-    
-    padding: 10px;
-}
-.head-bar{
-    display: flex;
-    flex-direction: row;
-}
-/* .head-bar li{
-   
-    
-} */
-#icon-1 ,#icon-2,#icon-3,#icon-4{
-     font-size: 20px;
-     margin-top: 20px;
-}
-.dropBorder{
-    border: spx solid black;
-}
-.ready{
+#searchbar{
   
-   box-shadow: rgba(0, 123, 255, 0.4) 0px 5px 15px;
+    width: 650px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid  #d3cbc0;
+    padding-left: 30px;
+}
+.homebtns{
+    display:flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    font-size:16px;
+    cursor: pointer;
+    border-radius: 10px;
+    background: none;
+    border: none;
+    
 }
 
-.reciept-card img ,.reciept-card embed {
-    width: 300px;
-    height: 350px;
-    object-fit: cover;
+.homebtns.active{
+    color: black;
+}
+.ibg.active
+{
+   padding: 10px;
+   border-radius: 5px;
+     background-color: #dfdcd8;
+     transition: padding 0.1s ease-in-out;
+}
+.ibg:hover{
+    padding: 10px;
+   border-radius: 5px;
+     background-color: #dfdcd8;
+     transition: padding 0.1s;
+}
+.btn-wrap{
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon-bg {
+    /* position: relative;
+    right: 30px; */
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 12px;
+  padding-left: 12px;
+ 
+   
     border-radius: 10px;
-    /* margin-right: 14rem; */
+      /* Space inside icon background */
+    transition: background 0.2s;
+}
+.bghover.active
+ {
+     
+   /* The background color for the active icon's container */
+    border-radius: 10px;
+    padding: 10px; /* Adjust padding to give the background some space */
+    color: black;
     
 }
-#uploadFiles{
+
+ .bghover{
+
+   font-size: 17px;
+ }
+.homebtns span
+{
+    font-size: 13px;
+    padding-top: 10px;
+    color: #1A1918;
+   
+}
+.button-sections{
     display: flex;
-    
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
+}
+#search-funnel{
+    color: #d3cbc0 ;
+    position:absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    /* left: 190px; */
+    /* top: 40px;
+    right: 90px; */
+}
+.logo-sec{
+ width: 40px;
+ height: 80px;
+}
+.fa-dropbox{
+ 
+    font-size: 32px;
+    width: 190px;
+   max-height: 80px;
+}
+#logo{
+   
+   padding: 14px 0px;
+   margin-top: 10px;
+   /* background-color:#2196f3; */
+}
+#Homeicon{
+
+}
+.container-1{
+    display: flex;
+    flex-direction: column;
+     justify-content:flex-start;
+    align-items: center;
+    /* width: 72px; */
+    min-width: 72px;
+    height:100vh;
+    background-color: #f7f5f2;
+   border-right: 1px solid  #d3cbc0;
+}
+.container-2{
+    display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-  
-    margin-top: 5rem;
-  
-    background-color: blue;
-   
+    gap: 20px;
+    width: 250px;
+    /* min-width: 300px; */
+    height:100vh;
+    background-color: #f7f5f2;
+    border-right: 1px solid  #d3cbc0;
+    padding-top: 10px;
 }
-/* nav{
-   
-   display: flex; 
-   justify-content: center;
-   align-items: center;  
-} */
+.container-1, .container-2{
+    height: 100vh;
+    position: sticky;
+    top: 0;
+}
+.Home{
 
-.reciept{
+    width: 252px;
+    height: 56px;
+
+}
+.Home-mid{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2px;
+    padding: 10px 16px 14px;
+ 
+}
+
+.select{
+    
+ /* padding: 12px; */
+  width: 200px;
+  max-width: 300px;
+  height: 20px;
+  text-align: left;
+  padding: 8px;
+  border-radius: 15px;
+  padding-left: 6px;
+  color:#3f3c37 ;
+  font-weight: 600px;
+}
+
+.select {
+ 
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 10px;
+    transition: background 0.2s ease;
+  
+}
+.select.active{
+    
+     font-weight: 600;
+}
+
+.select-bg{
+    
+   background-color: #ebe9e6;
+}
+.select i{
+    font-size: 13px;
+}
+.bg{
+   background-color: #dfdcd8;
+}
+.select a{
+     width: 250px;
+   height: 40px;
+   text-decoration: none !important;
+    color: inherit;
+    /* Gives the parent color */
+    /* padding: 10px; */
+}
+.select span{
+    font-size: 13px;
+   
+    margin-left: 10px;
+}
+.Home h2{
+    padding-left: 36px;
+    font-size: 17px;
+    height: 26px;
+    line-height: 26px;
+    margin: 0px;
+   color: #1A1918;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  padding-top: 20px;
+
+}
+.content-wrapper{
+   
+     
+    display: flex;
+    flex-direction:column;
+   flex: 1;
+   height: 1000vh;
+   overflow-y: auto;
+ 
+}
+.header-bar{
+    width:100%;
+    height: 50px;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    gap: 9px;
+    padding: 4px 40px 16px 36px;
+}
+.header-bar p{
+    margin: 0px;
+}
+.header-bar > .fa-eye{
+      
+    font-size: 15px;
+
+}
+.uploadOrdrop{
+    
+    
+    background-color: black;
+    color: white;
    
 }
-.Reciept-Box h3{
+.fa-arrow-down{
+  padding: 5px;
+}
+.closedOne{
+    display: flex;
+    flex-direction: column;
+}
+
+.icon{
+     margin-bottom: 5px;
+}
+
+
+.uploadOrdrop , .uploadOrdrop1{
+  width: 150px;
+    height: 75px;
+    padding: 12px;
+    padding-bottom: 7px;
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    gap: 15px;
+     border-radius: 15px;
+    font-size: 13px;
+    font-weight: 600;
+}
+.uploadOrdrop1{
+    
+   
+    border: 1px solid #d2cdcd;
+    color: black;
+
+
+}
+.uploadOrdrop li{
+ 
+    text-align: left;
+}
+/* .uploadNdrop{
     margin-top: 40px;
-}
-.Reciept-Box{
-     text-align: center;
-    margin-top: 7rem;
-    margin-left: 5rem;
-    margin-right: 5rem;
-}
-.Notification-bar{
-    width: 300px;
-    height: 600px;
-    background-color: black;
-    position:fixed;
-     right: -300px;
-    top: 0;
+} */
+.popup{
+    position: absolute;
+    background:black;
     color: white;
-   border-radius: 10px;
-   transition: right 0.3s ease-in-out;
-    /* z-index: 1000; */
-}
-.Notification-bar.active{
-   right: 0;
-}
-#notify-bell{
-     cursor: pointer;
-}
-#notify-bell:hover{
-    width: 20px;
-    height: 20px;
-     background-color: black;
-     color: white;
-     padding: 5px;
-     border-radius: 50%;
-}
-#power-btn{
-    position: relative;
-    left: -40px;
-    right: -100rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    top: -23px;
+    left: -2px;
+    width: 200px;
     z-index: 1000;
+}
+.popup.hidden {
+  display: none;
+}
+.popup ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.popup li {
+  padding: 10px;
+  cursor: pointer;
+}
+.popup li:hover {
+  background: #f1f1f1;
+}
+
+.Category-Boxs{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: center;
+    gap: 20px;
+    margin-top: 90px;
+    padding: 0px 48px 12px 36px;
+   
+}
+.mainContent
+{
+    width: 100%;
+    height: 100vh;
+}
+#drop-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 4px dotted #2196f3;
+    background:rgba(35,150,243,0.1);
+    color: #2196f3;
+    font-size: 24px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    transition:opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+#drop-overlay.active{
+    opacity: 1;
+}
+.uploaded-files{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.file-name{
+    margin-top: 8px;
+    font-size: 13px;
+    word-break: break-word;
+}
+.file-card{
+    width: 180px;
+    height: 220px;
+    padding: 10px;
     
 }
-#closeBtn{
+.ListFiles {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+  overflow: hidden;
+    padding: 0px 40px;
+}
+.file-item {
+    display: flex;
+   flex-direction: row;
+    align-items: center;
+    border-radius: 10px;
+    background: #f9f9f9;
+    text-align: center;
+    background: #fff;
+    overflow: hidden; /* keep content inside */
+}
+.no-scroll::-webkit-scrollbar {
+    display: none;
+}
+.file-item img,
+.file-item iframe {
+   width: 200px;
+   height: 170px;
+    border-radius: 15px;
+    object-fit: contain;
+   
+}
+.file-content
+{
+   
+    display: flex; 
+    align-items: center;
+    gap: 15px;
+    flex-grow: 1;
+}
+
+.file-name-info{
+    width: 700px;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+}
+.file-icon-preview{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    background-color: #1A1918;
+    flex-direction: row;
+
+}
+.no-scroll{
+    overflow: hidden !important;
+    border: none;
+}
+
+.file-options{
+    background-color: #1A1918;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.PhotoGallery{
+    margin-top: 70px;
+}
+.PhotoCategory{
+    display: none;
+    flex-direction: column;
+    width: 100%;
+
+    
+}
+.DisplayCorner{
+     display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: flex-start;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.PhotoCategory h3{
+    margin-left:40px;
+}
+
+.filtering-sec{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    /* gap: 20px; */
+    width: 100%;
+    height: 90px;
+    padding: 0px;
+   border-top: 1px solid black;
+   border-bottom: 1px solid black;
+}
+.select-category{
+    width: 300px;
+    height: 70px;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    gap: 10px;
+    border-right: 2px solid #ada3a3;
+}
+.Duration-category{
+    width: 300px;
+    height: 70px;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+    border-right: 2px solid #a59f9f;
+}
+ .photobtn{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.photobtnbg.active{
+    background-color: #e7e3de;
+    color: black;
+    width: 80px;
+    height: 37px;
+    border-radius: 13px;
+    
+    font-size: 14px;
+    font-weight: 500px;
+    transition: all 0.2s ease;
+}
+
+.file-options{
+    position: relative;
+    display: inline-block;
+}
+.more-options{
+    cursor: pointer;
+    font-size: 18px;
+    padding: 4px;
+}
+.options-dropdown{
+    display: none;
     position: absolute;
     top: 20px;
-    left: 20px;
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    min-width: 100px;
+    z-index: 100;
+}
+.options-dropdown p{
+    margin: 0;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.options-dropdown p:hover{
+    background:#f0f0f0;
+}
+
+.file-options:hover .options-dropdown{
+    display: block;
+}
+
+
+.GridFiles {
+    margin-top: 20px;
+    /* display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+    gap: 20px; */
+    width: 100%;
+    padding: 20px;
+
+}
+.card{
+    width: 178px;
+    height: 178px;
+    overflow: hidden;
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    background-color: #ededed;
+}
+.card-details p{
+    font-size: 14px;
+    text-align: center;
+    max-width: 90%; /* keeps text within card width */
+    white-space: nowrap;/* prevents text from wrapping to multiple lines */
+    overflow: hidden;
+    gap: 5px;
+    text-transform: capitalize;
+    /* font-weight: 500; */
+    letter-spacing: 1px;
+    text-overflow: ellipsis;
+    /* adds ... at the end if the filename is too long. */
+}
+.card-details{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
+    justify-content: center;
+    /* padding: 5px; */
+    text-align: center;
+    width: 100%;
+}
+
+
+.card-preview{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
+   border-radius: 0 !important; 
+
+}
+.card-preview img
+ {
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit:cover;
+  border: none;
+  border-radius: 0 !important;
+}
+
+.file-card{
+    position: relative;
+    display: inline-block;
+}
+.file-actions{
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    display:none;
+   border-radius: 5px;
+}
+.file-actions button {
+  
+  border: none;
+  font-size: 12px;
+  cursor: pointer;
+   /* width: 70px; */
+   height: 30px;
+  padding: 7px 10px;
+  /*
+   border-radius: 12px; */
+}
+.share-btn{
+    border-bottom-left-radius: 6px;
+    border-top-left-radius:6px ;
+    background-color: black;
     color: white;
+    border: none;
+
+}
+.more-btn{
+     border-bottom-right-radius: 6px;
+    border-top-right-radius:6px ;
+    
+   background-color: white;
+    color: black;
+}
+.link-btn{
+    background-color: white;
+    color: black;
+
+}
+#hide{
+    display: none;
+}
+
+
+
+.file-card:hover .file-actions {
+  display: flex;   /* make actions visible only on hover */
+  cursor: pointer;
+  background-color:rgba(0,0,0,1);
+}
+
+
+.Folder-Select{
+      display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2px;
+    padding: 10px 16px 14px;
 }

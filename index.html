@@ -3,106 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>DropBox</title>
+    <!-- Google Fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="DropBox.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <nav>
-        <div class="Logo-Sec">
-        <i class="fa-solid fa-receipt" id="reciept-icon"></i>
-            <h2>Reciept Warranty Oraganier</h2>
-        </div>
-        <i class="fa-solid fa-bell" id="notify-bell"></i>
- <!-- <div class="Notification-bar">
-         <i class="fa-solid fa-power-off" id="power-btn"></i>
-    </div> -->
-     <div id="Notify-bar" class="Notification-bar">
-       <!-- Cross Button -->
-        <i class="fa fa-times close-btn" id="closeBtn"></i>
-        <h2>Sidebar Menu</h2>
-        </div>
-        
-    </nav>
-     <div class="Hero">
-        <div class="hero-sec">
-        <h2>Reciept Warranty Oraganier</h2>
-        <button id="login-btn">Get Started</button>
-       
-        </div>
-        
-    <div class="dragDropBlock">
-        <div class="drop" id="drop-area">
-            <!-- <input type="file"> -->
-             <i class="fa-solid fa-cloud-arrow-up" id="cloud"></i>
-             <p>Drag or Drop File Here click to upload</p>
-             <input type="file" id="fileInput" hidden>
-        </div>
-        <p id="fileName"></p>
-     <div class="content">
+       <section id="sec1">
+               <div class="container-1">
+                    <div class="logo-sec"> <i class="fa-brands fa-dropbox" id="logo"></i></div>
+                    <div class="button-sections">
+                              
+                                    <button class="homebtns  ">
+                                        <div class="ibg"  id="home">
+                                                    <i class="fa-regular fa-house bghover  "></i>
+                                        </div>
+                                      
+                                   <span>Home</span>
+                            </button>
+                         
+                            
+                           
+                               <button class="homebtns">
+                                    <div class="ibg " id="fold">
+                                         <i class="fa-regular fa-folder-open bghover"></i>
+                                    </div>
+                                   
+                                  
+                                   <span>Folders</span>
+                              </button>
+                               <button class="homebtns">
+                                    <div class="ibg">
+                                        <i class="fa-regular fa-bell bghover"></i>
+                                    </div>
+                                   
+                                   <span>Activities</span>
+                              </button>
+                    
+                    </div>
+                  
+               </div>
+                <div class="container-2">
+                    <div class="Home">
+                         <h2>Home</h2>
+                    </div>
+                    <div class="Home-mid">
+                         <div class="select active select-bg">
+                                   <div class="select-wrap">
+                                               <a href="#" id="allFielesLink"> <i class="fa-regular fa-file"></i>
+                                    <span class="toggles" id="allfles">All Files</span></a>
+                                   
+                                   </div>
+                                  
+                         </div>
+                         <div class="select">
+                               <div class="select-wrap">
+                                          <a href="#" id="photosLink"> <i class="fa-regular fa-image"></i>
+                              <span class="toggles" id="photos">Photos</span></a>         
+                               </div>
+                            
+                         </div> 
+                          <div class="select">
+                              <div class="select-wrap">
+                                         <a href="#">  <i class="fa-regular fa-trash"></i> 
+                              <span class="toggle">Delete</span></a>   
+                              </div>
+                                   
+                         </div>       
+                    </div>
+                    <div class="Folder-Select">
+                         
+                    </div>
+                </div>
+       </section>
+       <div class="content-wrapper">
+            <section id="sec2">
+               <div class="Search-Box">
+               <i class="fa-solid fa-magnifying-glass" id="search-funnel"></i>
+                    <input type="search" placeholder="search" id="searchbar" >
+               </div>
+                
+       </section>
 
-            <select name="list" id="category">
-                <option value=""></option>
-                <option value="Reciept">Reciepts</option> 
-                <option value="Warranties">Warranties</option>
-                <option value="Bills">Bills</option>
-                <option value="Others">Others</option>
-            </select>
-            
-             <input type="text" id="desp" placeholder="Description">
-             <button id="btnUpload">Upload</button>
-     </div>
-       
-    </div>
+     <div class="mainContent">
+          <div id="drop-overlay">
+                  Drop files herse
+             </div>
+            <div class="Category-Boxs">
+                 <div class="uploadOrdrop">
+                          
+                    <div class="icon">
+                      <i class="fa-solid fa-down-long"></i>
+                    </div>
+                       
+                    <span class="uploadNdrop">Upload or drop</span>
+               
+                   
+              
+                    <div id="uploadMenu" class="popup hidden">
+                       <ul>
+                         <i class="closePopup fa-solid fa-lock" id="lock"></i>
+                         <li id="uploadFile">📄 File</li>
+                         <li id="uploadFolder">📁 Folder</li>
+                         </ul>
+                    </div>
+                    <input type="file" id="fileInput" style="display: none;"/>
+                     <input type="file" id="folderInput" style="display: none;" webkitdirectory directory multiple/>
+                 </div>
+
+
+        <div class="uploadOrdrop1">
+          
+            <div class="icon">
+                     <i class="fa-regular fa-plus upicon"></i>
+                    </div>
+                   
+                    <span class="uploadNdrop">Create</span>
+                 </div>
+             <div class="uploadOrdrop1">
+                    <div class="icon">
+                     <i class="fa-regular fa-folder"></i>
+                    </div>
+                
+                    <span class="uploadNdrop">Create Folder</span>
+
+               
+                 </div>
+
+
+            </div>       
+
+        <div class="header-bar">
+             <p>Suggested For You</p>
+             <i class="fa-solid fa-eye" id="show"></i>
+          <i class="fa-solid fa-eye-slash" id="hide"></i>
+        </div>
+           <div class="ListFiles">           
+                 </div>     
+            </div>
+        
+             <!-- PhotosSection -->
+            <div class="PhotoGallery">
+                    <div class="PhotoCategory">
+             <h3>Photos</h3>
+             <div class="filtering-sec">
+                   
+                    <div class="select-category">
+                         <button class="photobtn active">All items</button>
+                         <button class="photobtn">Photos</button>
+                         <button class="photobtn">Documents</button>
+                    </div>
+                    <div class="Duration-category">
+                         <button class="photobtn">Months</button>
+                         <button class="photobtn">Years</button>
+                         <button class="photobtn">Days</button>
+                    </div>
+             </div>
+
+             <div class="DisplayCorner">
+                  
+             </div>
+        </div>
+            </div>
+
+
+
+             <!-- <div class="All-Section">
+     <div class="All-header">
+           <h1>All files</h1>
+           <i class="fa-solid fa-gear"></i>
+     </div> -->
+         
+
+  </div>
+       </div>
+           
+ 
+        
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+<script>
+  pdfjsLib.GlobalWorkerOptions.workerSrc =
+    "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js";
+</script>
+
    
-  <div class="categories">
-    <div class="Reciepst-box">
-        <div class="head-bar">
-              <i class="fa-solid fa-file-invoice" id="icon-1"></i>
-              <h3>Reciepts</h3>
-        </div>
-        <div class="content-bar">
-            <p>Organize your purchase reciepts</p>
-        </div>
-    </div>
-     <div class="Warranties-box">
-         <div class="head-bar">
-            <i class="fa-solid fa-calendar-check" id="icon-2"></i>
-            <h3>Warranties</h3>
-         </div>
-         <div class="content-bar">
-            <p>keep track of product Warranties</p>
-         </div>
-     </div>
-     <div class="Bills-box">
-        <div class="head-bar">
-            <i class="fa-solid fa-file-invoice-dollar" id="icon-3"></i>
-            <h3>Bills</h3>
-        </div>
-        <div class="content-bar">
-            <p>Store and Manage your bills</p>
-        </div>
-     </div>
-      <div class="Others-box">
-        <div class="head-bar">
-            <i class="fa-solid fa-file" id="icon-4"></i>
-            <h3>Others</h3>
-        </div>
-        <div class="content-bar">
-            <p>Categorize Other important documents</p>
-        </div>
-      </div>
-   </div>
-     </div>
-     <div class="Reciept-Box">
-             <h3>Upload Files</h3>
-     <div class="upload-files" id="uploadFiles">
-     </div>
+        
      
        
-        <!-- <ul id="filesList"></ul> -->
-    </div>
+       
+    <script src="DropBox.js"></script>
    
-    <script src="script.js"></script>
 </body>
 </html>
